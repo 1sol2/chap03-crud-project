@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment/>
+    <entry key="selectCity">
+        SELECT
+        c.*
+        FROM city c
+        WHERE c.city LiKE CONCAT(?, '%')
+    </entry>
+    <entry key="insertCity">
+        INSERT INTO
+        city(city,country_id)
+        VALUES
+        (?,?)
+    </entry>
+    <entry key="updateCity">
+        UPDATE
+        city
+        SET
+        city = ?,
+        country_id = ?
+        WHERE
+        city_id = ?
+    </entry>
+    <entry key="deleteCity">
+        DELETE FROM
+        city
+        WHERE
+        city_id = ?
+    </entry>
+</properties>
